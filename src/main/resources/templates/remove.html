@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Phonebook Submission Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Remove Contact</h1>
+
+
+<form action="#" th:action="@{/remove}" th:object="${contact}" method="post">
+    <p> First Name: <input type="text" th:field="*{firstName}"></p>
+    <p> Last Name: <input type="text" th:field="*{lastName}"></p>
+    <p> Email Adress: <input type="text" th:field="*{email}"></p>
+    <p> Phone Number: <input type="text" th:field="*{phoneNumber}"></p>
+    <p><input type="submit" value="Remove"/><input type="reset" value="Reset"></p>
+</form>
+
+<a href="/database">Go to database</a>
+<br>
+<a href="/">Go to index page</a>
+<br>
+<a href="/submission-form">Add new contact</a>
+<br>
+<a href="/search">Find contact</a>
+<br>
+<a href="/database">View contacts database</a>
+<br>
+</body>
+</html>

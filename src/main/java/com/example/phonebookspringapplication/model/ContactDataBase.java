@@ -23,5 +23,17 @@ public class ContactDataBase {
     public void setContactList(List<Contact> contactList) {
         this.contactList = contactList;
     }
+
+    public List<Contact> findByLastName(Contact contact){
+        List<Contact> results = new ArrayList<>();
+
+        for(int i = 0;i<contactList.size();i++){
+            if(contact.getLastName().equals(contactList.get(i).getLastName())){
+                results.add(contactList.get(i));
+            }
+        }
+
+        return results;
+    }
 }
 

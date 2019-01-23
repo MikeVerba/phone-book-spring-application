@@ -2,17 +2,17 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Contacts Database</title>
+    <title>Search for Contacts</title>
 </head>
 <body>
-<h1>Contacts Database</h1>
 
-<ul>
-    <li th:each="one : ${contactList}" th:text="${one}"></li>
-</ul>
+<h1>Find contact by name</h1>
+<form action="#" th:action="@{/search}" th:object="${contact}" method="post">
 
-<a href="/submission-form"> Submit another contact</a>
-<br>
+    <p> Last Name: <input type="text" th:field="*{lastName}"></p>
+    <p><input type="submit" value="Search"/><input type="reset" value="Reset"></p>
+    </form>
+
 <a href="/">Go to index page</a>
 
 <a href="/submission-form">Add new contact</a>
