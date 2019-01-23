@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<h1>Contacts</h1>
+
+<p th:text=" 'First Name: ' + ${contact.firstName}"/>
+<p th:text="' Last Name: ' +${contact.lastName}"/>
+<p th:text="' Email Adress: ' +${contact.email}"/>
+<p th:text="' Phone Number: ' +${contact.phoneNumber}"/>
+<a href="/submission-form"> Submit another contact</a>
+<br>
+<a href="/database">Go to database</a>
+
+</body>
+</html>
